@@ -2,6 +2,7 @@
     "name": "atrapalo/monolog-elasticsearch",
     "description": "A Monolog handler and formatter that makes use of the elasticsearch/elasticsearch package",
     "type": "library",
+    "keywords": ["log", "logging", "logger", "monolog", "psr3", "psr-3", "elastic", "elasticsearch"]
     "require": {
         "elasticsearch/elasticsearch": "^2.0"
     },
