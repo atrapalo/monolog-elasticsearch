@@ -41,7 +41,9 @@ See CONTRIBUTING file.
 
 ## Running the Tests
 
-TBD
+```bash
+php bin/phpunit
+```
 
 ## Credits
 
