@@ -4,7 +4,7 @@ Monolog Elasticsearch handler and formatter
 This extremely simple library provide of an elasticsearch handler and formatter which makes use of the official PHP
 Elasticsearch client.
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/atrapalo/monolog-elasticsearch/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/atrapalo/monolog-elasticsearch/?branch=master)
+[![Build Status](https://travis-ci.org/atrapalo/monolog-elasticsearch.svg?branch=master)](https://travis-ci.org/atrapalo/monolog-elasticsearch) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/atrapalo/monolog-elasticsearch/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/atrapalo/monolog-elasticsearch/?branch=master)
 
 ## Usage
 

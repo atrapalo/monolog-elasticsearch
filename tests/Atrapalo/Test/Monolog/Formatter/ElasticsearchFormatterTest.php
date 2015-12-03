@@ -79,8 +79,10 @@ class ElasticsearchFormatterTest extends PHPUnit_Framework_TestCase
         $expected = [
             'body' => [
                 [
-                    'index' => 'index_name',
-                    'type'  => 'type_name'
+                    'index' => [
+                        '_index' => 'index_name',
+                        '_type'  => 'type_name'
+                    ]
                 ],
                 [
                     'level' => Logger::ERROR,
@@ -92,8 +94,10 @@ class ElasticsearchFormatterTest extends PHPUnit_Framework_TestCase
                     'message' => 'log',
                 ],
                 [
-                    'index' => 'index_name',
-                    'type'  => 'type_name'
+                    'index' => [
+                        '_index' => 'index_name',
+                        '_type'  => 'type_name'
+                    ]
                 ],
                 [
                     'level' => Logger::INFO,

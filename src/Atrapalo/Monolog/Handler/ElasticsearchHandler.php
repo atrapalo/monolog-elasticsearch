@@ -27,6 +27,9 @@ use Monolog\Logger;
  */
 class ElasticsearchHandler extends AbstractProcessingHandler
 {
+    const DEFAULT_INDEX_NAME = 'monolog';
+    const DEFAULT_TYPE_NAME  = 'record';
+
     /**
      * @var Client
      */
@@ -46,7 +49,7 @@ class ElasticsearchHandler extends AbstractProcessingHandler
     public function __construct(Client $client, array $options = [], $level = Logger::DEBUG, $bubble = true)
     {
         $this->client = $client;
-        $this->options = array_merge(['index' => 'monolog', 'type' => 'record'], $options);
+        $this->options = array_merge(['index' => static::DEFAULT_INDEX_NAME, 'type' => static::DEFAULT_TYPE_NAME], $options);
 
         parent::__construct($level, $bubble);
     }
@@ -56,7 +59,7 @@ class ElasticsearchHandler extends AbstractProcessingHandler
      */
     protected function write(array $record)
     {
-        $this->handleBatch([$record['formatted']]);
+        $this->client->index($record['formatted']);
     }
 
     /**

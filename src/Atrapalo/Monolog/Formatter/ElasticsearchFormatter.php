@@ -42,8 +42,10 @@ class ElasticsearchFormatter extends NormalizerFormatter
 
         foreach ($records as $record) {
             $bulk['body'][] = [
-                'index' => $this->index,
-                'type'  => $this->type,
+                'index' => [
+                    '_index' => $this->index,
+                    '_type'  => $this->type,
+                ]
             ];
 
             $bulk['body'][] = parent::format($record);
