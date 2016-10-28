@@ -3,9 +3,6 @@
     "description": "A Monolog handler and formatter that makes use of the elasticsearch/elasticsearch package",
     "type": "library",
     "keywords": ["log", "logging", "logger", "monolog", "psr3", "psr-3", "elastic", "elasticsearch"],
-    "require": {
-        "elasticsearch/elasticsearch": "^2.0"
-    },
     "require-dev": {
         "phpunit/phpunit": "^4.0",
         "monolog/monolog": "^1.17"

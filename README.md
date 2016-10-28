@@ -17,7 +17,7 @@ use Monolog\Logger;
 
 $logger = new Logger('application');
 $logger->pushHandler(
-    new ElasticsearchHanler($client, ['index' => 'logs', 'type' => 'log'])
+    new ElasticsearchHandler($client, ['index' => 'logs', 'type' => 'log'])
 );
 
 ```
